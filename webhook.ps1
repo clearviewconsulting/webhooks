@@ -1,11 +1,16 @@
-$Uri = ""
-$Token = "Bearer "
+$Uri = "https://h.app.wdesk.com/s/chains-triggers/webhook/XXXXXXXXXXXXX"
+$Token = "Bearer XXXXXXXXXX"
 
 $headers = @{
  'Content-Type'='application/json'
  'Authorization'= $Token
  }
-$Body = @{ }
+
+$Body = @{
+    'file_updated' = 'filename.csv'
+    'file_baseName' = 'filename'
+    'file_period' = 'FY23-Q3'
+}
 
 $JsonBody = $Body | ConvertTo-Json
 
